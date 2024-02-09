@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+    .attribution { 
+      font-size: 11px; 
+      text-align: center;
+      font-size: 11px; text-align: center; 
+      position: absolute;
+      bottom: 1vh;
+      left: 34%;
+      z-index: 10;
+    }
+    .attribution a {
+       color: hsl(228, 45%, 44%);
+    }
+
+    body{
+      font-family: Hanken Grotesk;
+      background-color: hsl(221, 100%, 96%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-container{
+      background-color: hsl(0, 0%, 100%);
+      width: 80%;
+      max-width: 700px;
+      height: auto;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 20px;
+      position: absolute;
+      top: 25%;
+      margin: 0 auto;
+    }
+    
+    @media (max-width: 600px){
+      .main-container{
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        top: 50%;
+      }
+    }
+
+    .item{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .left{
+      background-image: linear-gradient(hsla(256, 72%, 46%, 0.85), hsla(241, 72%, 46%, 1));
+      border-radius: 20px;
+    }
+
+    .right{
+      position: relative;
+      gap: 15px;   
+    }
+
+    .box{
+      text-align: center;
+      vertical-align: middle;
+      color: hsl(224, 19%, 65%);
+      display: block;
+    }
+
+    .title{
+      width: 85%;
+      height: 20%;
+      line-height: 100px;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .circle{
+      background-image: linear-gradient(hsla(241, 72%, 46%, 1), hsla(256, 72%, 46%, 0.2));
+      border-radius: 50%;
+      width: 50%;
+      height: 35%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .result{
+      margin-top: 30px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .description{
+      width: 65%;
+      margin-top: 25px;
+    }
+
+    #points{
+      font-size: 4em;
+      font-weight: 700;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .summary{
+      color: black;
+      display: block;
+      margin-top: 20px;
+      font-weight: 700;
+      margin-right: 20vw;
+    }
+
+    .skilbox{
+      width: 75%;
+      height: 11%;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .continue{
+      background-color: hsl(224, 30%, 27%);
+      border-radius: 27.5px;
+      text-align: center;
+      margin-top: 20px;
+      color: aliceblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .skilpoints{
+      display: flex;
+      margin-right: 15px;
+    }
+
+    .skildescription{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-left: 15px;
+      gap: 5px;
+    }
+
+    .skildescription h4{
+      margin: 0;
+    }
+
+    #gray{
+      color: hsl(221, 8%, 60%);
+      margin-left: 10px;
+    }
+  
+  
+  
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="item left">  
+      <div class="box title">Your Result</div>
+      <div class="box circle">
+        <div id="points">76</div>
+        <div>of 100</div>
+      </div>
+      <div class="box result">Great</div>
+      <div class="box description">You scored higher than 65% of the people who have taken these tests.</div>
+    </div>
+
+    <div class="item right">
+      <div class="box summary">
+        <h2>Summary</h2>
+      </div>
+      <div class="skilbox" style="background-color: hsla(0, 100%, 67%, 0.1);">
+        <div class="skildescription">
+          <div>
+            <img src="./assets/images/icon-reaction.svg" />  
+          </div>
+            <h4 style="color: hsl(0, 80%, 62%); display: inline;">Reaction</h4>
+        </div>
+
+        <div class="skilpoints">
+          <h4>80</h4>
+          <h4 id="gray">/ 100</h4>
+        </div>       
+      </div>
+
+      <div class="skilbox" style="background-color: hsla(39, 100%, 56%, 0.1);">
+        <div class="skildescription">
+          <div>
+            <img src="./assets/images/icon-memory.svg"/>
+          </div>
+            <h4 style="color: hsl(41, 80%, 62%); display: inline;">Memory</h4>
+        </div>
+
+        <div class="skilpoints">
+          <h4>92</h4>
+          <h4 id="gray">/ 100</h4>
+        </div>
+         
+      </div>
+
+      <div class="skilbox" style="background-color: hsla(166, 100%, 37%, 0.1);">
+        <div class="skildescription">
+          <div>
+            <img src="./assets/images/icon-verbal.svg"/>
+          </div>
+          <h4 style="color: hsl(167, 80%, 62%); display: inline;">Verbal</h4>
+        </div>
+        
+        <div class="skilpoints">
+          <h4>61</h4>
+          <h4 id="gray">/ 100</h4>
+        </div>
+         
+      </div>
+
+      <div class="skilbox" style="background-color: hsla(234, 85%, 45%, 0.1);">
+        <div class="skildescription">
+          <div>
+            <img src="./assets/images/icon-visual.svg"/>
+          </div>
+          <h4 style="color: hsl(221, 80%, 62%); display: inline;">Visual</h4>
+        </div>
+
+        <div class="skilpoints">
+          <h4>72</h4>
+          <h4 id="gray">/ 100</h4>
+        </div>
+         
+      </div>
+
+      <div class="skilbox continue">
+        <h4>Continue</h4>
+      </div> 
+
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Szymon Maciejewski</a>.
+  </div>
+</body>
+</html>
